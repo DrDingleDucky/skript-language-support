@@ -7,23 +7,50 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#symbols"
+		},
+		{
+			"include": "#numeric"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.skript",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.skript",
+					"match": "\\b(if|else|while|for|return)\\b"
+				},
+				{
+					"name": "entity.name.function.skript",
+					"match": "function"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.skript",
 			"begin": "\"",
-			"end": "\"",
+			"end": "\""
+		},
+		"symbols": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.skript",
-					"match": "\\\\."
+					"name": "comment.line.number-sign.skript",
+					"match": "\\#[^#\\n]*"
+				},
+				{
+					"name": "variable.name.skript",
+					"begin": "{",
+					"end": "}"
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric.skript",
+					"match": "0|1|2|3|4|5|6|7|8|9"
 				}
 			]
 		}
