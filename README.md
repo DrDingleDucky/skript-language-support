@@ -1,4 +1,4 @@
-# skript-language-support README
+# Skript Language Support
 
 This is the README for your extension "skript-language-support". After writing up a brief description, we recommend including the following sections.
 
