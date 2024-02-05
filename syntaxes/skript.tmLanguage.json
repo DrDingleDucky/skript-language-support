@@ -24,7 +24,7 @@
 				},
 				{
 					"name": "entity.name.function.skript",
-					"match": "function"
+					"match": "function|local"
 				}
 			]
 		},
@@ -37,7 +37,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.number-sign.skript",
-					"match": "\\#[^#\\n]*"
+					"match": "#[^#]*"
 				},
 				{
 					"name": "variable.name.skript",
