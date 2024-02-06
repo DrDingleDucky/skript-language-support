@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.skript",
-					"match": "\\b(if|else|while|for|return)\\b"
+					"match": "\\b(on|if|else|while|loop|for|return)\\b"
 				},
 				{
 					"name": "entity.name.function.skript",
