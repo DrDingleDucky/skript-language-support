@@ -20,7 +20,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.skript",
-					"begin": "^on",
+					"begin": "^on|^aliases|^options|^variables",
 					"end": ":"
 				},
 				{
@@ -33,16 +33,7 @@
 				},
 				{
 					"name": "storage.type.function.skript",
-					"begin": "\\b(function)\\b",
-					"end": ":\n",
-					"contentName": "entity.name.function.skript",
-					"patterns": [
-						{
-							"name": "variable.parameter.skript",
-							"begin": "\\(",
-							"end": "\\)"
-						}
-					]
+					"match": "function"
 				},
 				{
 					"name": "constant.language.true.skript",
@@ -82,6 +73,11 @@
 					"name": "variable.name.skript",
 					"begin": "{",
 					"end": "}"
+				},
+				{
+					"name": "variable.parameter.skript",
+					"begin": "\\(",
+					"end": "\\)"
 				}
 			]
 		},
