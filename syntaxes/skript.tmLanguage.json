@@ -20,11 +20,50 @@
 			"patterns": [
 				{
 					"name": "keyword.control.skript",
-					"match": "\\b(on|if|else|while|loop|for|return)\\b"
+					"begin": "^on",
+					"end": ":"
 				},
 				{
-					"name": "entity.name.function.skript",
-					"match": "function|local"
+					"name": "keyword.control.skript",
+					"match": "\\b(if|else|while|loop(?!-)|for|return)\\b"
+				},
+				{
+					"name": "storage.type.function.skript",
+					"match": "^local"
+				},
+				{
+					"name": "storage.type.function.skript",
+					"begin": "\\b(function)\\b",
+					"end": ":\n",
+					"contentName": "entity.name.function.skript",
+					"patterns": [
+						{
+							"name": "variable.parameter.skript",
+							"begin": "\\(",
+							"end": "\\)"
+						}
+					]
+				},
+				{
+					"name": "constant.language.true.skript",
+					"match": "true"
+				},
+				{
+					"name": "constant.language.false.skript",
+					"match": "false"
+				},
+				{
+					"name": "storage.type.command.skript",
+					"begin": "^command",
+					"end": ":",
+					"contentName": "entity.name.function.skript",
+					"patterns": [
+						{
+							"name": "variable.parameter.skript",
+							"begin": "<",
+							"end": ">"
+						}
+					]
 				}
 			]
 		},
