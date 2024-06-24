@@ -1,3 +1,3 @@
 # Skript Language Support
 
-A WIP VSCode extension for the Skript language.
+A simple syntax highlighting extension for the Skript language.
